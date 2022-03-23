@@ -1,25 +1,108 @@
+/* mobile */
 .navbar {
   display: flex;
   color: aliceblue;
   align-items: center;
-  height: 5rem !important;
+  position: relative;
+  height: 6rem !important;
+  justify-content: space-evenly;
   background-color: #121212;
 }
-/* background-color: #353535;
-   */
-.navBar__cart {
+.navbar__top {
+  margin: 0;
 }
-.navBar__cart__count {
-  line-height: 1.5rem;
-  position: relative;
-  top: -1rem;
-  left: 1rem;
-  background: #00e9bf;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
-  text-align: center;
-  font-weight: 400;
-  font-size: 8px;
-  border: 1px solid #000;
+.navBar__middle {
+  display: none;
+}
+.navBar__search__bottom {
+  padding: 0.5rem;
+}
+.navBar__search__bottom .navBAr__middle__search {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  left: 0.3rem;
+  width: 95%;
+  align-items: center;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  background-color: #fff;
+}
+.navBar__search__bottom input {
+  width: 90% !important;
+  min-width: 90%;
+  text-decoration: none;
+  border: none;
+  font-size: 0.8rem;
+  outline: transparent;
+}
+.navbar__search__bottom input :focus {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+.navBar__search__bottom .icon {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 38px;
+}
+.navBar__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 600px) {
+  .navbar {
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    height: 5rem !important;
+    justify-content: space-evenly;
+    background-color: #121212;
+  }
+  .navBar__search__bottom {
+    display: none;
+  }
+  .space {
+    flex-grow: 0.1;
+  }
+  .navbar__top {
+    flex-grow: 0.2;
+  }
+  .navBar__middle {
+    display: flex;
+    flex-grow: 0.5;
+  }
+  .navBAr__middle__search {
+    display: flex;
+    flex-grow: 0.5;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+  }
+  .navBAr__middle__search input {
+    width: 90% !important;
+    min-width: 95%;
+
+    border: 0;
+    font-size: 0.8rem;
+  }
+  .navBar__middle .icon {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 38px;
+  }
+  .navBar__bottom {
+    display: flex;
+    flex-grow: 0.1;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .navBar__cart {
+  }
+  .navBar__cart__count {
+  }
 }
