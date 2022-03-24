@@ -4,25 +4,30 @@
   color: aliceblue;
   align-items: center;
   position: relative;
-  height: 6rem !important;
-  justify-content: space-evenly;
+  height: 7rem !important;
+  justify-content: space-between;
   background-color: #121212;
 }
+
 .navbar__top {
-  margin: 0;
+  height: max-content;
+  margin-bottom: 15%;
+  flex-grow: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .navBar__middle {
   display: none;
 }
-.navBar__search__bottom {
-  padding: 0.5rem;
-}
+
 .navBar__search__bottom .navBAr__middle__search {
   position: absolute;
-  bottom: 5%;
+  margin: 3%;
+  top: 55%;
   display: flex;
-  left: 0.3rem;
-  width: 95%;
+  left: 0.1rem;
+  width: 90%;
   align-items: center;
   padding: 0.2rem;
   border-radius: 0.2rem;
@@ -50,12 +55,35 @@
 .navBar__bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  flex-grow: 0.3;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 15%;
 }
-@media only screen and (min-width: 600px) {
+.user {
+  align-items: center;
+}
+.navBar__cart {
+  display: flex;
+  margin-top: 0.5rem;
+
+  justify-content: center;
+  align-items: center;
+}
+.navBar__cart__svg,
+.user {
+  cursor: pointer;
+}
+.navBar__cart__count {
+  cursor: not-allowed;
+}
+/* for 700 and further px  design */
+@media only screen and (min-width: 700px) {
   .navbar {
     display: flex;
     color: aliceblue;
+    position: relative;
     align-items: center;
     height: 5rem !important;
     justify-content: space-evenly;
@@ -64,15 +92,22 @@
   .navBar__search__bottom {
     display: none;
   }
+  .navBAr__menu {
+    display: flex;
+    align-items: center;
+  }
   .space {
     flex-grow: 0.1;
   }
+
   .navbar__top {
-    flex-grow: 0.2;
+    position: static;
+    margin: 0;
+    margin-right: 10%;
   }
   .navBar__middle {
     display: flex;
-    flex-grow: 0.5;
+    flex-grow: 0.6;
   }
   .navBAr__middle__search {
     display: flex;
@@ -85,9 +120,9 @@
   .navBAr__middle__search input {
     width: 90% !important;
     min-width: 95%;
-
-    border: 0;
     font-size: 0.8rem;
+    outline: transparent;
+    border: 0;
   }
   .navBar__middle .icon {
     justify-content: center;
@@ -99,10 +134,7 @@
     display: flex;
     flex-grow: 0.1;
     align-items: center;
+    margin-bottom: 0;
     justify-content: space-evenly;
-  }
-  .navBar__cart {
-  }
-  .navBar__cart__count {
   }
 }
